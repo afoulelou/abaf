@@ -1,0 +1,48 @@
+Introduction to R-codes
+# Exercice1 ---------------------------------------------------------------
+
+# creeer les vecteurs
+vec1 <- c(1,2,3,4,5,1,2,3,4,5,1,2,3,4,5)
+vec2 <- c(1,1,1,2,2,2,3,3,3,4,4,4,5,5,5)
+vec3 <- c(1,1,2,2,2,3,3,3,3,4,4,4,4,4)          
+vec4 <-c(rep("idrissa",6), rep("Mawli,10"), rep("Abdoulaye", 15))
+
+# Exercice2 ---------------------------------------------------------------
+
+# Poids taille et sexe
+# 1-vecteurs
+sexe <- c(rep("F",2), "G","F", rep("G",6))
+taille <- c(100, 97, 95.5, 101, 100, 98.5, 103, 98, 101.5, 100)
+poids <- c(16, 14, 13.5, 15.4, 16.5, 16, 17, 14.8, 17, 16.7)
+individus <- c("Erika", "Celia", "Eric", "Eleve", "Paul", "Jean", "Adam", "Louis", "Jules", "Leo")
+# 2-moyennes
+mean(taille)
+mean(poids)
+# 3-Indice de poids corporels(IMC)
+IMC = poids/((taille/100)^2)
+IMC
+# 4-base de donnees
+baseDonnee <- data.frame(individus, poids, taille, sexe, IMC)
+
+# Exercice3 ---------------------------------------------------------------
+
+# 1-base2Import <- base2
+# 2-individus, variable, type
+names(base2)
+str(base2)
+# 592 individus, 3 variables, categorielles(factors)
+# 3-class, levels
+class(base2$cheveux)
+levels(base2$cheveux)
+nlevels(base2$cheveux)
+class(base2$yeux)
+levels(base2$yeux)
+nlevels(base2$yeux)
+class(base2$sexe)
+levels(base2$sexe)
+nlevels(base2$sexe)
+class(base2)
+dim(base2)
+dim(base2$cheveux)
+getwd()
+setwd()
